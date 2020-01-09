@@ -1,11 +1,16 @@
 const mongoose = require('mongoose');
 
-const chatSchema = mongoose.Schema({
+const postSchema = mongoose.Schema({
     datetime: Date,
     user_id: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-    content: String
+    content: String,
+    comments: [{
+      user_id: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
+      datetime: Date,
+      content: String
+    }]
 });
 
 
 //first is name of model, second is schema
-module.exports = mongoose.model('Chat', chatSchema);
+module.exports = mongoose.model('Post', postSchema);
