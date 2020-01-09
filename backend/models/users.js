@@ -16,7 +16,7 @@ const userSchema = mongoose.Schema({
         read:Boolean
     }],
     posts:[{
-        post_id:{type:mongoose.Schema.Types.ObjectId, ref:'User'}
+        post_id:{type:mongoose.Schema.Types.ObjectId, ref:'Post'}
         // add more later
     }],
     chats:[{
