@@ -6,7 +6,7 @@ const notificationSchema = mongoose.Schema({
 
     datetime: Date,
     content: String,
-    noitificationType:String,
+    noitificationType:String
 
 });
 
